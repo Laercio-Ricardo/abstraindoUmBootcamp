@@ -28,6 +28,3 @@ O domínio da aplicação foi estruturado da seguinte forma:
 
 ## 🚀 Como Executar
 
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/Laercio-Ricardo/abstraindoUmBootcamp.git](https://github.com/Laercio-Ricardo/abstraindoUmBootcamp.git)
