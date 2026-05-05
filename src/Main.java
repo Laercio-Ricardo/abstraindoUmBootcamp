@@ -1,4 +1,7 @@
 import br.com.abstraindobootcamp.dominio.Curso;
+import br.com.abstraindobootcamp.dominio.Mentoria;
+
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +19,18 @@ public class Main {
         curso2.setDescricao("Curso de Java Avançado");
         curso2.setCargaHoraria(15);
 
+        // Criando agora as classses mentoria
+
+        Mentoria mentoria1 = new Mentoria();
+
+        mentoria1.setTitulo("Mentoria de Java");
+        mentoria1.setDescricao("Segunda Mentoria do curso");
+        mentoria1.setData(LocalDate.now());
+
+
         System.out.println(curso1);
         System.out.println(curso2);
+        System.out.println(mentoria1);
 
 
     }
