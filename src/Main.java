@@ -1,4 +1,6 @@
+import br.com.abstraindobootcamp.dominio.Bootcamp;
 import br.com.abstraindobootcamp.dominio.Curso;
+import br.com.abstraindobootcamp.dominio.Dev;
 import br.com.abstraindobootcamp.dominio.Mentoria;
 
 import java.time.LocalDate;
@@ -27,10 +29,38 @@ public class Main {
         mentoria1.setDescricao("Segunda Mentoria do curso");
         mentoria1.setData(LocalDate.now());
 
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Laércio Java");
+        bootcamp.setDescricao("Bootcamp de Java e Spring do Laércio");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria1);
 
-        System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria1);
+
+        Dev devLaercio = new Dev();
+        devLaercio.setNome("Laércio");
+        devLaercio.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos incritos" + devLaercio.getConteudoInscritos());
+        devLaercio.progredir();
+        System.out.println("Conteúdos incritos" + devLaercio.getConteudoInscritos());
+        System.out.println("Conteúdos concluidos" + devLaercio.getConteudoConcluidos());
+
+
+
+        Dev devJoao = new Dev();
+        devJoao.setNome("João");
+        devJoao.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos incritos" + devJoao.getConteudoInscritos());
+
+        devJoao.progredir();
+        System.out.println("Conteúdos incritos" + devJoao.getConteudoInscritos());
+        System.out.println("Conteúdos concluidos" + devJoao.getConteudoConcluidos());
+
+
+
+
+
+
 
 
     }
